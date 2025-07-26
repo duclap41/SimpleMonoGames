@@ -1,0 +1,40 @@
+# Build output
+**/bin/
+**/obj/
+**/x64/
+**/x86/
+**/[Dd]ebug/
+**/[Rr]elease/
+**/artifacts/
+
+# VS-specific
+**/.vs/
+**/*.suo
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
+
+# NuGet
+**/packages/
+**/*.nupkg
+**/*.snupkg
+**/project.lock.json
+**/project.fragment.lock.json
+.nuget/
+
+# Rider / VS Code
+**/.idea/
+**/.vscode/
+**/*.sln.iml
+
+# Logs and temp
+**/*.log
+**/*.bak
+**/*.tmp
+**/*.dbmdl
+**/*.tlog
+
+# Secrets and environment config
+**/appsettings.Development.json
+**/secrets.json
+.env
