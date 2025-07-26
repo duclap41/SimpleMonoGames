@@ -9,6 +9,7 @@ namespace Spaceship
     {
         public List<Asteroid> asteroids = new List<Asteroid>();
         int _asteroidSpeed = 180;
+        const int _maxSpeed = 720;
         double _timer = 2;
         double _spawnTime = 2; // 2 is inital spawn time
         double _difficult = 0.1;
@@ -34,6 +35,11 @@ namespace Spaceship
                 if (_spawnTime > 0.3)
                 {
                     _spawnTime -= _difficult; // asteroid will appear faster
+                }
+
+                if (_asteroidSpeed < _maxSpeed)
+                {
+                    _asteroidSpeed += 4;
                 }
             }
         }
