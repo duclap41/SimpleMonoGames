@@ -10,7 +10,7 @@ namespace Spaceship
         public List<Asteroid> asteroids = new List<Asteroid>();
         int _asteroidSpeed = 180;
         double _timer = 2;
-        double _initialTime = 2;
+        double _spawnTime = 2; // 2 is inital spawn time
         double _difficult = 0.1;
 
         int _windowWidth;
@@ -29,8 +29,12 @@ namespace Spaceship
             if (_timer <= 0)
             {
                 asteroids.Add(new Asteroid(_asteroidSpeed, _windowWidth, _windowHeight));
-                _timer = _initialTime;
-                _initialTime -= _difficult; // asteroid will appear faster
+                _timer = _spawnTime;
+
+                if (_spawnTime > 0.3)
+                {
+                    _spawnTime -= _difficult; // asteroid will appear faster
+                }
             }
         }
     }
